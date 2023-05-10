@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  #application:
+   # name: EMPLOYEE-SERVICE
+  datasource:
+    password: password
+    url: jdbc:postgresql://localhost:5432/employee_db
+    username: kevinjia
+  jpa:
+    hibernate:
+      ddl-auto: update
+    #      ddl-auto: create-drop # clean   each time
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+eureka:
+  client:
+    serverUrl:
+      defaultZone: http://localhost:8761/eureka/
